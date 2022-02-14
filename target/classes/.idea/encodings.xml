@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="windows-1250">
+    <file url="file://$PROJECT_DIR$/src/main/java/codefiles/controllers/warehouseControllers/product/AddProductController.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java/codefiles/database/dao/CommonDao.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java/codefiles/utils/DialogUtils.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java/codefiles/utils/FillContractorTable.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controllers/saleDocControllers/SaleDocTabController.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controllers/warehouseControllers/storeDocControllers/StoreDocController.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/java/utils/UtilsGenerateDocument.java" charset="windows-1250" />
+    <file url="PROJECT" charset="windows-1250" />
+  </component>
+</project>

@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import utils.fxmlFieldUtils.*?>
+
+<VBox alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.businessControllers.AddBusinessController">
+   <ScrollPane maxWidth="-Infinity">
+      <VBox alignment="TOP_CENTER" minWidth="-Infinity" spacing="5.0">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+         </padding>
+         <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+               minWidth="-Infinity" spacing="5.0">
+            <TitledPane animated="false" collapsible="false" prefHeight="312.0" prefWidth="301.0"
+                        text="Dane firmy do faktury">
+               <VBox fillWidth="false" spacing="10.0">
+                  <padding>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                  </padding>
+                  <VBox>
+                     <TextField fx:id="name" prefHeight="25.0" prefWidth="280.0"
+                                promptText="pełna nazwa firmy"/>
+                     <Label nodeOrientation="RIGHT_TO_LEFT" text="nazwa">
+                        <graphic>
+                           <Label fx:id="wrongName" text="*" textFill="RED">
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                           </Label>
+                        </graphic>
+                        <font>
+                           <Font size="10.0"/>
+                        </font>
+                        <padding>
+                           <Insets right="5.0"/>
+                        </padding>
+                     </Label>
+                  </VBox>
+                  <VBox>
+                     <OnlyNumberInField fx:id="nip" prefHeight="25.0" prefWidth="280.0"
+                                        promptText="np.: 1234567890"/>
+                     <Label nodeOrientation="RIGHT_TO_LEFT" text="NIP">
+                        <graphic>
+                           <Label fx:id="wrongNip" text="*" textFill="RED">
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                           </Label>
+                        </graphic>
+                        <font>
+                           <Font size="10.0"/>
+                        </font>
+                        <VBox.margin>
+                           <Insets/>
+                        </VBox.margin>
+                        <padding>
+                           <Insets right="5.0"/>
+                        </padding>
+                     </Label>
+                  </VBox>
+                  <VBox>
+                     <HBox alignment="CENTER_LEFT" spacing="5.0">
+                        <VBox>
+                           <TextField fx:id="town" prefHeight="25.0" prefWidth="200.0"
+                                      promptText="np.: Warszawa"/>
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="miejscowość">
+                              <graphic>
+                                 <Label fx:id="wrongTown" text="*" textFill="RED">
+                                    <font>
+                                       <Font size="10.0"/>
+                                    </font>
+                                 </Label>
+                              </graphic>
+                              <padding>
+                                 <Insets right="5.0"/>
+                              </padding>
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                           </Label>
+                        </VBox>
+                        <VBox>
+                           <HBox alignment="CENTER_LEFT">
+                              <OnlyNumberInField fx:id="zc1" prefHeight="25.0"
+                                                 prefWidth="30.0" promptText="00"/>
+                              <Label text="-"/>
+                              <OnlyNumberInField fx:id="zc2" prefWidth="40.0"
+                                                 promptText="000"/>
+                           </HBox>
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="kod pocztowy">
+                              <graphic>
+                                 <Pane>
+                                    <Label fx:id="wrongZipCode1" text="*" textFill="RED">
+                                       <font>
+                                          <Font size="10.0"/>
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="wrongZipCode2" text="*" textFill="RED">
+                                       <font>
+                                          <Font size="10.0"/>
+                                       </font>
+                                    </Label>
+                                 </Pane>
+                              </graphic>
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                              <VBox.margin>
+                                 <Insets/>
+                              </VBox.margin>
+                              <padding>
+                                 <Insets right="5.0"/>
+                              </padding>
+                           </Label>
+                        </VBox>
+                     </HBox>
+                  </VBox>
+                  <VBox>
+                     <HBox alignment="CENTER_LEFT" spacing="5.0">
+                        <VBox>
+                           <TextField fx:id="street" prefHeight="25.0" prefWidth="200.0"
+                                      promptText="np.: Warszawska"/>
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="ulica">
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                              <padding>
+                                 <Insets right="5.0"/>
+                              </padding>
+                           </Label>
+                        </VBox>
+                        <VBox>
+                           <TextField fx:id="number" prefHeight="25.0" prefWidth="75.0"
+                                      promptText="np.: 11/3c"/>
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="numer">
+                              <graphic>
+                                 <Label fx:id="wrongNumber" text="*" textFill="RED">
+                                    <font>
+                                       <Font size="10.0"/>
+                                    </font>
+                                 </Label>
+                              </graphic>
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                              <padding>
+                                 <Insets right="5.0"/>
+                              </padding>
+                           </Label>
+                        </VBox>
+                     </HBox>
+                  </VBox>
+                  <VBox>
+                     <TextField fx:id="country" prefHeight="25.0" prefWidth="280.0"
+                                promptText="np.: Polska"/>
+                     <Label nodeOrientation="RIGHT_TO_LEFT" text="państwo">
+                        <graphic>
+                           <Label fx:id="wrongCountry" text="*" textFill="RED">
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                           </Label>
+                        </graphic>
+                        <font>
+                           <Font size="10.0"/>
+                        </font>
+                        <VBox.margin>
+                           <Insets/>
+                        </VBox.margin>
+                        <padding>
+                           <Insets right="5.0"/>
+                        </padding>
+                     </Label>
+                  </VBox>
+               </VBox>
+            </TitledPane>
+            <VBox spacing="5.0">
+               <HBox spacing="5.0">
+                  <TitledPane animated="false" collapsible="false" prefHeight="211.0" prefWidth="301.0"
+                              text="Dane korespondencyjne">
+                     <VBox fillWidth="false" spacing="10.0">
+                        <padding>
+                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                        </padding>
+                        <CheckBox fx:id="checkAddress" mnemonicParsing="false"
+                                  onAction="#onSetSameAddress"
+                                  text="Takie same jak dane siedziby firmy">
+                           <VBox.margin>
+                              <Insets bottom="18.0" top="5.0"/>
+                           </VBox.margin>
+                        </CheckBox>
+                        <VBox>
+                           <HBox alignment="CENTER_LEFT" spacing="5.0">
+                              <VBox>
+                                 <TextField fx:id="townPost" prefHeight="25.0"
+                                            prefWidth="200.0" promptText="np.: Warszawa"/>
+                                 <Label nodeOrientation="RIGHT_TO_LEFT"
+                                        text="miejscowość">
+                                    <graphic>
+                                       <Label fx:id="wrongTownPost" text="*"
+                                              textFill="RED">
+                                          <font>
+                                             <Font size="10.0"/>
+                                          </font>
+                                       </Label>
+                                    </graphic>
+                                    <font>
+                                       <Font size="10.0"/>
+                                    </font>
+                                    <padding>
+                                       <Insets right="5.0"/>
+                                    </padding>
+                                 </Label>
+                              </VBox>
+                              <VBox>
+                                 <HBox alignment="CENTER_LEFT">
+                                    <OnlyNumberInField fx:id="zc1Post"
+                                                       prefHeight="25.0"
+                                                       prefWidth="30.0"
+                                                       promptText="00"/>
+                                    <Label text="-"/>
+                                    <OnlyNumberInField fx:id="zc2Post" prefWidth="40.0"
+                                                       promptText="000"/>
+                                 </HBox>
+                                 <Label nodeOrientation="RIGHT_TO_LEFT"
+                                        text="kod pocztowy">
+                                    <graphic>
+                                       <Pane>
+                                          <Label fx:id="wrongZipCodePost1" text="*"
+                                                 textFill="RED">
+                                             <font>
+                                                <Font size="10.0"/>
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="wrongZipCodePost2" text="*"
+                                                 textFill="RED">
+                                             <font>
+                                                <Font size="10.0"/>
+                                             </font>
+                                          </Label>
+                                       </Pane>
+                                    </graphic>
+                                    <font>
+                                       <Font size="10.0"/>
+                                    </font>
+                                    <padding>
+                                       <Insets right="5.0"/>
+                                    </padding>
+                                 </Label>
+                              </VBox>
+                           </HBox>
+                        </VBox>
+                        <VBox>
+                           <HBox alignment="CENTER_LEFT" spacing="5.0">
+                              <VBox>
+                                 <TextField fx:id="streetPost" prefHeight="25.0"
+                                            prefWidth="200.0"
+                                            promptText="np.: Warszawska"/>
+                                 <Label nodeOrientation="RIGHT_TO_LEFT" text="ulica">
+                                    <font>
+                                       <Font size="10.0"/>
+                                    </font>
+                                    <padding>
+                                       <Insets right="5.0"/>
+                                    </padding>
+                                 </Label>
+                              </VBox>
+                              <VBox>
+                                 <TextField fx:id="numberPost" prefHeight="25.0"
+                                            prefWidth="75.0" promptText="np.: 11/3c"/>
+                                 <Label nodeOrientation="RIGHT_TO_LEFT" text="numer">
+                                    <graphic>
+                                       <Label fx:id="wrongNumberPost" text="*"
+                                              textFill="RED">
+                                          <font>
+                                             <Font size="10.0"/>
+                                          </font>
+                                       </Label>
+                                    </graphic>
+                                    <font>
+                                       <Font size="10.0"/>
+                                    </font>
+                                    <VBox.margin>
+                                       <Insets/>
+                                    </VBox.margin>
+                                    <padding>
+                                       <Insets right="5.0"/>
+                                    </padding>
+                                 </Label>
+                              </VBox>
+                           </HBox>
+                        </VBox>
+                        <VBox>
+                           <TextField fx:id="countryPost" prefHeight="25.0" prefWidth="280.0"
+                                      promptText="np.: Polska"/>
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="państwo">
+                              <graphic>
+                                 <Label fx:id="wrongCountryPost" text="*" textFill="RED">
+                                    <font>
+                                       <Font size="10.0"/>
+                                    </font>
+                                 </Label>
+                              </graphic>
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                              <padding>
+                                 <Insets right="5.0"/>
+                              </padding>
+                           </Label>
+                        </VBox>
+                     </VBox>
+                  </TitledPane>
+                  <TitledPane animated="false" collapsible="false" prefHeight="211.0" prefWidth="301.0"
+                              text="Dane kontaktowe">
+                     <VBox fillWidth="false" spacing="10.0">
+                        <padding>
+                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                        </padding>
+                        <VBox>
+                           <OnlyNumberInField fx:id="phone" prefHeight="25.0" prefWidth="280.0"
+                                              promptText="np.: +48999888444"/>
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="telefon">
+                              <graphic>
+                                 <Label fx:id="wrongPhone" text="*" textFill="RED">
+                                    <font>
+                                       <Font size="10.0"/>
+                                    </font>
+                                 </Label>
+                              </graphic>
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                              <padding>
+                                 <Insets right="5.0"/>
+                              </padding>
+                           </Label>
+                        </VBox>
+                        <VBox>
+                           <OnlyNumberInField fx:id="fax" prefHeight="25.0" prefWidth="280.0"
+                                              promptText="np.: 123123123"/>
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="fax">
+                              <graphic>
+                                 <Label fx:id="wrongFax" text="*" textFill="RED"
+                                        visible="false">
+                                    <font>
+                                       <Font size="10.0"/>
+                                    </font>
+                                 </Label>
+                              </graphic>
+                              <padding>
+                                 <Insets right="5.0"/>
+                              </padding>
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                           </Label>
+                        </VBox>
+                        <VBox>
+                           <TextField fx:id="email" prefHeight="25.0" prefWidth="280.0"
+                                      promptText="np.: email@gmail.com"/>
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="adres e-mail">
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                              <padding>
+                                 <Insets right="5.0"/>
+                              </padding>
+                           </Label>
+                        </VBox>
+                        <VBox>
+                           <TextField fx:id="website" prefHeight="25.0" prefWidth="280.0"
+                                      promptText="np.: www.strona.pl"/>
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="adres strony WWW">
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                              <padding>
+                                 <Insets right="5.0"/>
+                              </padding>
+                           </Label>
+                        </VBox>
+                     </VBox>
+                  </TitledPane>
+               </HBox>
+               <TitledPane animated="false" collapsible="false" prefHeight="71.0" prefWidth="607.0"
+                           text="Numer rachunku bankowego">
+                  <HBox spacing="5.0">
+                     <Label fx:id="wrongBank" text="*" textFill="RED"/>
+                     <OnlyNumberInField fx:id="bank1" prefHeight="25.0" prefWidth="30.0"
+                                        promptText="00"/>
+                     <OnlyNumberInField fx:id="bank2" prefWidth="45.0" promptText="0000"/>
+                     <OnlyNumberInField fx:id="bank3" prefWidth="45.0" promptText="0000"/>
+                     <OnlyNumberInField fx:id="bank4" prefWidth="45.0" promptText="0000"/>
+                     <OnlyNumberInField fx:id="bank5" prefWidth="45.0" promptText="0000"/>
+                     <OnlyNumberInField fx:id="bank6" prefWidth="45.0" promptText="0000"/>
+                     <OnlyNumberInField fx:id="bank7" prefWidth="45.0" promptText="0000"/>
+                     <Pane visible="false">
+                        <Label fx:id="wrongBank1" text="*" textFill="RED"/>
+                        <Label fx:id="wrongBank2" text="*" textFill="RED"/>
+                        <Label fx:id="wrongBank3" text="*" textFill="RED"/>
+                        <Label fx:id="wrongBank4" text="*" textFill="RED"/>
+                        <Label fx:id="wrongBank5" text="*" textFill="RED"/>
+                        <Label fx:id="wrongBank6" text="*" textFill="RED"/>
+                        <Label fx:id="wrongBank7" text="*" textFill="RED"/>
+                     </Pane>
+                  </HBox>
+               </TitledPane>
+            </VBox>
+         </HBox>
+         <Label fx:id="correctLabel" text="Wprowadź poprawnie wszystkie zaznaczone pola (*)" textFill="RED">
+            <VBox.margin>
+               <Insets/>
+            </VBox.margin>
+         </Label>
+         <HBox alignment="TOP_CENTER" spacing="100.0">
+            <VBox.margin>
+               <Insets/>
+            </VBox.margin>
+            <padding>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+            <Button mnemonicParsing="false" onAction="#onClearAllFields" prefHeight="30.0" prefWidth="100.0"
+                    text="Wyczyść"/>
+            <Button mnemonicParsing="false" onAction="#onCancel" prefHeight="30.0"
+                    prefWidth="100.0" text="Anuluj"/>
+            <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#onSave" prefHeight="30.0"
+                    prefWidth="100.0" text="Zapisz"/>
+         </HBox>
+      </VBox>
+   </ScrollPane>
+</VBox>

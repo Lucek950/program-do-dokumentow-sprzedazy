@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.saleDocControllers.InfoSaleDocController">
+   <ScrollPane maxWidth="-Infinity">
+      <VBox alignment="TOP_CENTER" minWidth="-Infinity" spacing="2.0">
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+         <HBox alignment="TOP_CENTER" spacing="20.0">
+            <TitledPane animated="false" collapsible="false" prefWidth="250.0" text="Firma">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <VBox spacing="5.0">
+                  <VBox>
+                     <Label fx:id="nipBus">
+                        <font>
+                           <Font size="12.0" />
+                        </font>
+                     </Label>
+                     <Separator prefWidth="200.0" />
+                     <Label text="NIP">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                     </Label>
+                  </VBox>
+                  <VBox>
+                     <Label fx:id="nameBus">
+                        <font>
+                           <Font size="12.0" />
+                        </font>
+                     </Label>
+                     <Separator prefWidth="200.0" />
+                     <Label text="nazwa">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                     </Label>
+                  </VBox>
+                  <HBox spacing="5.0">
+                     <VBox prefWidth="160.0">
+                        <Label fx:id="townBus">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <Separator />
+                        <Label text="miejscowość">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                     </VBox>
+                     <VBox prefWidth="65.0">
+                        <Label fx:id="zipCodeBus">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <Separator />
+                        <Label text="kod pocztowy">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                     </VBox>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <VBox prefWidth="160.0">
+                        <Label fx:id="streetBus">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <Separator />
+                        <Label text="ulica">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                     </VBox>
+                     <VBox prefWidth="65.0">
+                        <Label fx:id="addressBus">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <Separator />
+                        <Label text="numer">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                     </VBox>
+                  </HBox>
+                  <VBox>
+                     <Label fx:id="bankBus" text="__-____-____-____-____-____-____">
+                        <font>
+                           <Font size="12.0" />
+                        </font>
+                     </Label>
+                     <Separator prefWidth="200.0" />
+                     <Label text="numer rachunku">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                     </Label>
+                  </VBox>
+               </VBox>
+            </TitledPane>
+            <TitledPane animated="false" collapsible="false" prefHeight="238.0" prefWidth="250.0" text="Kontrahent">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <VBox spacing="5.0">
+                  <HBox alignment="CENTER_LEFT">
+                     <Pane>
+                        <VBox fx:id="nipConVbox">
+                           <Label fx:id="nipCon">
+                              <font>
+                                 <Font size="12.0" />
+                              </font>
+                           </Label>
+                           <Separator prefWidth="230.0" />
+                           <Label text="NIP">
+                              <font>
+                                 <Font size="10.0" />
+                              </font>
+                           </Label>
+                        </VBox>
+                        <VBox fx:id="peselConVbox" visible="false">
+                           <Label fx:id="peselCon">
+                              <font>
+                                 <Font size="12.0" />
+                              </font>
+                           </Label>
+                           <Separator prefWidth="230.0" />
+                           <Label text="PESEL" textFill="RED">
+                              <font>
+                                 <Font size="10.0" />
+                              </font>
+                           </Label>
+                        </VBox>
+                        <Label fx:id="noneLabel" text="Brak" visible="false" />
+                     </Pane>
+                  </HBox>
+                  <VBox fx:id="vBoxContractorData" spacing="5.0">
+                     <VBox>
+                        <Label fx:id="nameCon">
+                           <font>
+                              <Font size="12.0"/>
+                           </font>
+                        </Label>
+                        <Separator prefWidth="200.0"/>
+                        <Label text="nazwa">
+                           <font>
+                              <Font size="10.0"/>
+                           </font>
+                        </Label>
+                     </VBox>
+                     <HBox spacing="5.0">
+                        <VBox prefWidth="160.0">
+                           <Label fx:id="townCon">
+                              <font>
+                                 <Font size="12.0"/>
+                              </font>
+                           </Label>
+                           <Separator/>
+                           <Label text="miejscowość">
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                           </Label>
+                        </VBox>
+                        <VBox prefWidth="65.0">
+                           <Label fx:id="zipCodeCon">
+                              <font>
+                                 <Font size="12.0"/>
+                              </font>
+                           </Label>
+                           <Separator/>
+                           <Label text="kod pocztowy">
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                           </Label>
+                        </VBox>
+                     </HBox>
+                     <HBox spacing="5.0">
+                        <VBox prefWidth="160.0">
+                           <Label fx:id="streetCon">
+                              <font>
+                                 <Font size="12.0"/>
+                              </font>
+                           </Label>
+                           <Separator/>
+                           <Label text="ulica">
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                           </Label>
+                        </VBox>
+                        <VBox prefWidth="65.0">
+                           <Label fx:id="addressCon">
+                              <font>
+                                 <Font size="12.0"/>
+                              </font>
+                           </Label>
+                           <Separator/>
+                           <Label text="numer">
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                           </Label>
+                        </VBox>
+                     </HBox>
+                  </VBox>
+               </VBox>
+            </TitledPane>
+            <TitledPane fx:id="titlePaneType" animated="false" collapsible="false" prefWidth="180.0">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <VBox spacing="5.0">
+                  <VBox>
+                     <Label fx:id="number">
+                        <font>
+                           <Font size="12.0" />
+                        </font>
+                     </Label>
+                     <Separator prefWidth="200.0" />
+                     <Label text="numer faktury">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                     </Label>
+                  </VBox>
+                  <VBox fx:id="vboxAdditionalDoc" visible="false">
+                     <Label fx:id="additionalDocValue">
+                        <font>
+                           <Font size="12.0" />
+                        </font>
+                     </Label>
+                     <Separator prefWidth="200.0" />
+                     <Label fx:id="additionalDocLabel" text="...">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                     </Label>
+                  </VBox>
+                  <VBox>
+                     <Label fx:id="issuePlace">
+                        <font>
+                           <Font size="12.0" />
+                        </font>
+                     </Label>
+                     <Separator prefWidth="200.0" />
+                     <Label nodeOrientation="LEFT_TO_RIGHT" text="miejsce wystawienia">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                     </Label>
+                  </VBox>
+                  <VBox>
+                     <Label fx:id="issueDate">
+                        <font>
+                           <Font size="12.0" />
+                        </font>
+                     </Label>
+                     <Separator prefWidth="200.0" />
+                     <Label nodeOrientation="LEFT_TO_RIGHT" text="data wystawienia">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                     </Label>
+                  </VBox>
+                  <VBox>
+                     <Label fx:id="executeDate">
+                        <font>
+                           <Font size="12.0" />
+                        </font>
+                     </Label>
+                     <Separator prefWidth="200.0" />
+                     <Label nodeOrientation="LEFT_TO_RIGHT" text="data dokonania">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                     </Label>
+                  </VBox>
+               </VBox>
+            </TitledPane>
+         </HBox>
+         <VBox alignment="TOP_CENTER" spacing="2.0">
+            <TableView fx:id="productsTV" editable="true" prefHeight="150.0" prefWidth="808.0">
+               <columns>
+                  <TableColumn fx:id="lpCol" editable="false" minWidth="23.0" prefWidth="23.0" text="Lp" />
+                  <TableColumn fx:id="nameCol" minWidth="200.0" prefWidth="200.0" text="Nazwa - Opis" />
+                  <TableColumn fx:id="pkwiuCol" minWidth="80.0" text="CN/PKWiU" />
+                  <TableColumn fx:id="quantityCol" minWidth="30.0" prefWidth="30.0" text="Ilość" />
+                  <TableColumn fx:id="unitCol" minWidth="30.0" prefWidth="30.0" text="j.m" />
+                  <TableColumn fx:id="unitPriceNetCol" minWidth="84.0" prefWidth="84.0" text="Cena j. netto" />
+                  <TableColumn fx:id="vatCol" minWidth="47.0" prefWidth="47.0" text="VAT[%]" />
+                  <TableColumn fx:id="discountCol" minWidth="57.0" prefWidth="57.0" text="Rabat[%]" />
+                  <TableColumn fx:id="volNetCol" minWidth="85.0" prefWidth="85.0" text="Wartość netto" />
+                  <TableColumn fx:id="sumVatCol" minWidth="67.0" prefWidth="67.0" text="Kwota VAT" />
+                  <TableColumn fx:id="volGrossCol" minWidth="90.0" prefWidth="90.0" text="Wartość brutto" />
+               </columns>
+            </TableView>
+            <HBox alignment="TOP_CENTER" prefWidth="808.0" spacing="2.0">
+               <VBox prefWidth="250.0" spacing="2.0">
+                  <TitledPane animated="false" collapsible="false" prefHeight="125.0" text="Płatność">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                     <VBox spacing="5.0">
+                        <HBox spacing="15.0">
+                           <VBox prefWidth="120.0">
+                              <Label fx:id="paymentMethod">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Label>
+                              <Separator />
+                              <Label nodeOrientation="LEFT_TO_RIGHT" text="forma płatności">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                           </VBox>
+                           <VBox fx:id="splitPaymentVbox">
+                              <HBox spacing="3.0">
+                                 <CheckBox fx:id="splitPayment" disable="true" mnemonicParsing="false" textAlignment="JUSTIFY">
+                                    <font>
+                                       <Font size="10.0" />
+                                    </font>
+                                 </CheckBox>
+                                 <Label text="Mechanizm">
+                                    <font>
+                                       <Font size="10.0" />
+                                    </font>
+                                 </Label>
+                              </HBox>
+                              <Label text="podzielonej płatności">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                           </VBox>
+                        </HBox>
+                        <VBox fx:id="paymentDateVbox" prefWidth="120.0">
+                           <Label fx:id="paymentDate">
+                              <font>
+                                 <Font size="12.0" />
+                              </font>
+                           </Label>
+                           <Separator />
+                           <Label nodeOrientation="LEFT_TO_RIGHT" text="termin płatności">
+                              <font>
+                                 <Font size="10.0" />
+                              </font>
+                           </Label>
+                        </VBox>
+                     </VBox>
+                  </TitledPane>
+                  <TitledPane animated="false" collapsible="false" text="Wystawił">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                     <VBox>
+                        <Label fx:id="issued">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <Separator />
+                        <Label nodeOrientation="LEFT_TO_RIGHT" text="imię i nazwisko">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                     </VBox>
+                  </TitledPane>
+               </VBox>
+               <VBox prefWidth="555.0">
+                  <TableView fx:id="ratesTV" prefHeight="100.0">
+                     <columns>
+                        <TableColumn fx:id="ratesVatCol" minWidth="160.0" prefWidth="160.0" text="według stawki Vat" />
+                        <TableColumn fx:id="ratesNetCol" minWidth="130.0" prefWidth="100.0" text="wartość netto" />
+                        <TableColumn fx:id="ratesSumVatCol" minWidth="120.0" prefWidth="100.0" text="kwota VAT" />
+                        <TableColumn fx:id="ratesGrossCol" minWidth="130.0" prefWidth="100.0" text="wartość brutto" />
+                     </columns>
+                  </TableView>
+                  <HBox>
+                     <TitledPane animated="false" collapsible="false" expanded="false" minWidth="160.0" nodeOrientation="RIGHT_TO_LEFT" prefWidth="160.0" text="Razem:">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font>
+                     </TitledPane>
+                     <TextField fx:id="totalRateNetCol" minWidth="130.0" prefWidth="130.0" />
+                     <TextField fx:id="totalRateSumVatCol" minWidth="120.0" prefWidth="120.0" />
+                     <TextField fx:id="totalRateGrossCol" prefHeight="25.0" />
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                     </padding>
+                     <VBox alignment="CENTER_RIGHT" prefWidth="120.0">
+                        <Label text="Razem do zapłaty:">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text="Słownie:">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </VBox>
+                     <VBox alignment="CENTER_RIGHT" prefWidth="390.0">
+                        <Label fx:id="priceToPay">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="priceToPayInWords" text="...">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </VBox>
+                  </HBox>
+               </VBox>
+            </HBox>
+         </VBox>
+         <Button mnemonicParsing="false" onAction="#onClose" prefHeight="30.0" prefWidth="100.0" text="Wyjdź">
+            <VBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </VBox.margin>
+         </Button>
+      </VBox>
+   </ScrollPane>
+</VBox>

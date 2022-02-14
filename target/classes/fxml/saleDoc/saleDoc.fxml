@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<TabPane fx:id="tabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+         minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.2"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.saleDocControllers.SaleDocController">
+  <Tab onSelectionChanged="#onSelectionInvoiceSale" text="Faktury sprzedaży">
+    <fx:include fx:id="invoiceSale" source="saleDocTab.fxml"/>
+  </Tab>
+  <Tab onSelectionChanged="#onSelectionInvoiceBuy" text="Faktury zakupu">
+    <fx:include fx:id="invoiceBuy" source="saleDocTab.fxml"/>
+  </Tab>
+  <Tab onSelectionChanged="#onSelectionReceipt" text="Sprzedaż detaliczna">
+    <fx:include fx:id="receipt" source="saleDocTab.fxml"/>
+  </Tab>
+</TabPane>

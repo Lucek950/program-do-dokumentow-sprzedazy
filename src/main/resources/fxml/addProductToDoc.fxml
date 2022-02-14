@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.AddProductToDocController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+   </padding>
+   <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+         spacing="10.0">
+      <VBox alignment="TOP_CENTER" prefWidth="150.0">
+         <Label text="Podaj jaką ilość jednostek dodać do faktury:" textAlignment="CENTER" wrapText="true"/>
+         <TextField fx:id="quantityTf"/>
+      </VBox>
+      <VBox alignment="TOP_CENTER" prefWidth="150.0">
+         <Label text="Podaj jaką wysokość rabatu do faktury:" textAlignment="CENTER" wrapText="true"/>
+         <TextField fx:id="discountTf"/>
+         <Label text="gdy brak rabatu pomiń pole" textFill="RED"/>
+      </VBox>
+   </HBox>
+   <HBox spacing="10.0">
+      <Button mnemonicParsing="false" onAction="#onCancel" prefHeight="25.0" prefWidth="70.0" text="Anuluj"/>
+      <Button fx:id="btnAccept" disable="true" mnemonicParsing="false" onAction="#onAccept" prefHeight="25.0"
+              prefWidth="70.0" text="Akceptuj"/>
+   </HBox>
+</VBox>

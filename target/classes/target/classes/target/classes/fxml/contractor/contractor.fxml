@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="1075.0" spacing="5.0"
+      xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.contactorControllers.ContractorController">
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+   </padding>
+   <HBox alignment="CENTER_LEFT" spacing="5.0">
+      <VBox>
+         <ComboBox fx:id="filtersComboBox" prefHeight="25.0" prefWidth="150.0"/>
+         <Label text="filtruj po polu">
+            <font>
+               <Font size="10.0"/>
+            </font>
+            <VBox.margin>
+               <Insets left="5.0"/>
+            </VBox.margin>
+         </Label>
+         <TextField fx:id="searchField" promptText="Szukaj">
+            <VBox.margin>
+               <Insets top="2.0"/>
+            </VBox.margin>
+         </TextField>
+      </VBox>
+      <TitledPane alignment="CENTER" animated="false" collapsible="false" prefHeight="67.0" prefWidth="100.0"
+                  text="Kontrahent">
+         <font>
+            <Font name="System Bold" size="12.0"/>
+         </font>
+         <VBox alignment="CENTER" spacing="5.0">
+            <padding>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+            <Button mnemonicParsing="false" onAction="#openAddContractor" prefHeight="25.0" prefWidth="100.0"
+                    text="Dodaj"/>
+         </VBox>
+      </TitledPane>
+      <Pane>
+         <TitledPane fx:id="titledPaneAddSaleDoc" alignment="CENTER" animated="false" collapsible="false"
+                     disable="true" prefHeight="67.0" prefWidth="100.0" text="Do faktury" visible="false">
+            <font>
+               <Font name="System Bold" size="12.0"/>
+            </font>
+            <VBox alignment="CENTER" spacing="5.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+               </padding>
+               <Button alignment="CENTER" mnemonicParsing="false" onAction="#addToSaleDoc" prefHeight="25.0"
+                       prefWidth="100.0" text="Dodaj"/>
+            </VBox>
+         </TitledPane>
+         <TitledPane fx:id="titledPaneAddStoreDoc" alignment="CENTER" animated="false" collapsible="false"
+                     disable="true" prefHeight="67.0" prefWidth="100.0" text="Do magazynu" visible="false">
+            <font>
+               <Font name="System Bold" size="12.0"/>
+            </font>
+            <VBox alignment="CENTER" spacing="5.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+               </padding>
+               <Button alignment="CENTER" mnemonicParsing="false" onAction="#addToStoreDoc"
+                       prefHeight="25.0" prefWidth="100.0" text="Dodaj"/>
+            </VBox>
+         </TitledPane>
+      </Pane>
+   </HBox>
+   <TableView fx:id="contractorTableView" onKeyPressed="#onKeyPressed" onMouseClicked="#onMouseClicked"
+              prefHeight="534.0">
+      <columns>
+         <TableColumn fx:id="idCol" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" text="ID"/>
+         <TableColumn fx:id="nameCol" maxWidth="400.0" minWidth="200.0" prefWidth="200.0" text="Nazwa"/>
+         <TableColumn fx:id="nipCol" maxWidth="100.0" minWidth="80.0" text="NIP"/>
+         <TableColumn fx:id="peselCol" maxWidth="100.0" minWidth="80.0" text="PESEL"/>
+         <TableColumn fx:id="townCol" maxWidth="300.0" minWidth="150.0" prefWidth="150.0" text="Miejscowość"/>
+         <TableColumn fx:id="zipCodeCol" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" text="Kod pocztowy"/>
+         <TableColumn fx:id="streetCol" maxWidth="300.0" minWidth="150.0" prefWidth="150.0" text="Ulica"/>
+         <TableColumn fx:id="numberCol" maxWidth="80.0" minWidth="45.0" prefWidth="45.0" text="Numer"/>
+         <TableColumn fx:id="countryCol" maxWidth="300.0" minWidth="100.0" prefWidth="100.0" text="Państwo"/>
+         <TableColumn fx:id="personalDataBtnCol" maxWidth="30.0" minWidth="30.0" prefWidth="30.0"/>
+         <TableColumn fx:id="editBtnCol" maxWidth="30.0" minWidth="30.0" prefWidth="30.0"/>
+         <TableColumn fx:id="deleteBtnCol" maxWidth="30.0" minWidth="30.0" prefWidth="30.0"/>
+      </columns>
+   </TableView>
+</VBox>

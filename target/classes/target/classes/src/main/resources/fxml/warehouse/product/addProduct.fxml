@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import utils.fxmlFieldUtils.*?>
+
+<VBox alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.warehouseControllers.productControllers.AddProductController">
+   <ScrollPane maxWidth="-Infinity">
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0">
+            <TitledPane animated="false" collapsible="false" text="Dane towaru lub usługi">
+               <HBox spacing="10.0">
+                  <padding>
+                     <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                  </padding>
+                  <VBox spacing="10.0">
+                     <VBox spacing="10.0">
+                        <HBox spacing="10.0">
+                           <VBox prefWidth="110.0">
+                              <ComboBox fx:id="typeProductCbox" onAction="#onSwitchWareOrService" prefWidth="110.0" promptText="wybierz..." />
+                              <Label nodeOrientation="RIGHT_TO_LEFT" text="rodzaj">
+                                 <graphic>
+                                    <Label fx:id="wrongType" text="*" textFill="RED">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </graphic>
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                           </VBox>
+                           <VBox>
+                              <TextField fx:id="nameTf" prefWidth="230.0" />
+                              <Label nodeOrientation="RIGHT_TO_LEFT" text="nazwa">
+                                 <graphic>
+                                    <Label fx:id="wrongName" text="*" textFill="RED">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </graphic>
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                           </VBox>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <VBox prefWidth="100.0">
+                              <HBox prefWidth="110.0">
+                                 <ComboBox fx:id="unitsCbox" prefWidth="75.0" promptText="wybierz..." />
+                                 <Button mnemonicParsing="false" onAction="#onAddUnit" prefWidth="25.0" text="+" />
+                              </HBox>
+                              <Label nodeOrientation="RIGHT_TO_LEFT" text="jednostka miary">
+                                 <graphic>
+                                    <Label fx:id="wrongUnit" text="*" textFill="RED">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </graphic>
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                           </VBox>
+                           <VBox prefWidth="100.0">
+                              <ComboBox fx:id="saleVatCbox" onAction="#onCalculateSaleGrossPrice" prefWidth="100.0" promptText="wybierz..." />
+                              <Label nodeOrientation="RIGHT_TO_LEFT" text="stawka VAT[%]">
+                                 <graphic>
+                                    <Label fx:id="wrongSaleVat" text="*" textFill="RED">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </graphic>
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                           </VBox>
+                           <VBox prefWidth="130.0">
+                              <ComboBox fx:id="gtuCbox" prefWidth="130.0" promptText="wybierz..." />
+                              <Label nodeOrientation="RIGHT_TO_LEFT" text="grupa GTU">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                           </VBox>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <VBox prefWidth="170.0">
+                              <TextField fx:id="productCodeTf" />
+                              <Label nodeOrientation="RIGHT_TO_LEFT" text="kod towaru/usługi">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                           </VBox>
+                           <VBox prefWidth="170.0">
+                              <OnlyNumberInField fx:id="nrCatalogTf" />
+                              <Label nodeOrientation="RIGHT_TO_LEFT" text="nr katalogowy">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                           </VBox>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <VBox prefWidth="170.0">
+                              <TextField fx:id="pkwIuCnTf" />
+                              <Label nodeOrientation="RIGHT_TO_LEFT" text="PKWiU/CN">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                           </VBox>
+                           <VBox prefWidth="170.0">
+                              <OnlyNumberInField fx:id="barcodeTf" />
+                              <Label nodeOrientation="RIGHT_TO_LEFT" text="kod kreskowy">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                           </VBox>
+                        </HBox>
+                     </VBox>
+                     <VBox fx:id="buyPriceVbox">
+                        <HBox>
+                           <TitledPane alignment="CENTER" animated="false" collapsible="false" nodeOrientation="RIGHT_TO_LEFT" text="Cena netto [PLN]">
+                              <font>
+                                 <Font name="System Bold" size="12.0" />
+                              </font>
+                              <graphic>
+                                 <Label fx:id="wrongBuyPrice" text="*" textFill="RED" />
+                              </graphic>
+                              <OnlyNumberInField fx:id="buyNetPriceTf" alignment="CENTER_RIGHT" prefWidth="90.0" />
+                           </TitledPane>
+                           <TitledPane alignment="CENTER" animated="false" collapsible="false" nodeOrientation="RIGHT_TO_LEFT" prefWidth="105.0" text="VAT[%]">
+                              <font>
+                                 <Font name="System Bold" size="12.0" />
+                              </font>
+                              <graphic>
+                                 <Label fx:id="wrongBuyVat" text="*" textFill="RED" />
+                              </graphic>
+                              <ComboBox fx:id="buyVatCbox" onAction="#onCalculateBuyGrossPrice" prefWidth="115.0" promptText="wybierz..." />
+                           </TitledPane>
+                           <TitledPane alignment="CENTER" animated="false" collapsible="false" text="Cena brutto [PLN]">
+                              <font>
+                                 <Font name="System Bold" size="12.0" />
+                              </font>
+                              <OnlyNumberInField fx:id="buyGrossPriceTf" alignment="CENTER_RIGHT" editable="false" prefWidth="90.0" />
+                           </TitledPane>
+                        </HBox>
+                        <Label nodeOrientation="RIGHT_TO_LEFT" text="cena zakupu">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                        </Label>
+                     </VBox>
+                  </VBox>
+                  <VBox spacing="10.0">
+                     <VBox prefHeight="190.0" prefWidth="340.0">
+                        <TextArea fx:id="descTa" />
+                        <Label nodeOrientation="RIGHT_TO_LEFT" text="opis">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                        </Label>
+                     </VBox>
+                     <VBox>
+                        <HBox>
+                           <TitledPane alignment="CENTER" animated="false" collapsible="false" nodeOrientation="RIGHT_TO_LEFT" prefWidth="90.0" text="Cena netto [PLN]">
+                              <font>
+                                 <Font name="System Bold" size="12.0" />
+                              </font>
+                              <graphic>
+                                 <Label fx:id="wrongSalePrice" text="*" textFill="RED" />
+                              </graphic>
+                              <OnlyNumberInField fx:id="saleNetPriceTf" alignment="CENTER_RIGHT" />
+                           </TitledPane>
+                           <TitledPane alignment="CENTER" animated="false" collapsible="false" prefWidth="90.0" text="Cena brutto [PLN]">
+                              <font>
+                                 <Font name="System Bold" size="12.0" />
+                              </font>
+                              <OnlyNumberInField fx:id="saleGrossPriceTf" alignment="CENTER_RIGHT" editable="false" />
+                           </TitledPane>
+                           <TitledPane alignment="CENTER" animated="false" collapsible="false" prefWidth="70.0" text="Narzut [%]">
+                              <font>
+                                 <Font name="System Bold" size="12.0" />
+                              </font>
+                              <TextField fx:id="overheadTf" alignment="CENTER_RIGHT" editable="false" />
+                           </TitledPane>
+                           <TitledPane alignment="CENTER" animated="false" collapsible="false" prefWidth="90.0" text="Zysk netto [PLN]">
+                              <font>
+                                 <Font name="System Bold" size="12.0" />
+                              </font>
+                              <OnlyNumberInField fx:id="gainNetTf" alignment="CENTER_RIGHT" editable="false" />
+                           </TitledPane>
+                        </HBox>
+                        <Label nodeOrientation="RIGHT_TO_LEFT" text="cena sprzedaży">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                        </Label>
+                     </VBox>
+                  </VBox>
+               </HBox>
+            </TitledPane>
+         </HBox>
+         <Label fx:id="correctLabel" text="Wprowadź poprawnie wszystkie zaznaczone pola (*)" textFill="RED">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+         </Label>
+         <HBox alignment="TOP_CENTER" spacing="100.0">
+            <padding>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+            <Button mnemonicParsing="false" onAction="#onClearAllFields" prefHeight="30.0" prefWidth="100.0" text="Wyczyść" />
+            <Button mnemonicParsing="false" onAction="#onCancel" prefHeight="30.0" prefWidth="100.0" text="Anuluj" />
+            <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#onSave" prefHeight="30.0" prefWidth="100.0" text="Zapisz" />
+         </HBox>
+      </VBox>
+   </ScrollPane>
+</VBox>

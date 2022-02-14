@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefWidth="1075.0" spacing="5.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.warehouseControllers.productControllers.ProductController">
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0">
+        <VBox>
+            <ComboBox fx:id="filtersCbox" prefWidth="150.0" />
+            <Label text="filtruj po polu">
+                <font>
+                    <Font size="10.0" />
+                </font>
+                <VBox.margin>
+                    <Insets left="5.0" />
+                </VBox.margin>
+            </Label>
+            <TextField fx:id="searchField" promptText="Szukaj">
+                <VBox.margin>
+                    <Insets top="2.0" />
+                </VBox.margin>
+            </TextField>
+        </VBox>
+        <TitledPane alignment="CENTER" animated="false" collapsible="false" prefHeight="67.0" prefWidth="100.0" text="Towar/usługa">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <VBox alignment="CENTER" spacing="5.0">
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </padding>
+                <Button alignment="CENTER" mnemonicParsing="false" onAction="#onAddWare" prefHeight="25.0" prefWidth="100.0" text="Dodaj" />
+            </VBox>
+        </TitledPane>
+        <Pane>
+         <TitledPane fx:id="titledPaneAddSaleDoc" alignment="CENTER" animated="false" collapsible="false" disable="true" prefHeight="67.0" prefWidth="100.0" text="Do faktury" visible="false">
+             <font>
+                 <Font name="System Bold" size="12.0" />
+             </font>
+             <VBox alignment="CENTER" spacing="5.0">
+                 <padding>
+                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                 </padding>
+                 <Button alignment="CENTER" mnemonicParsing="false" onAction="#onAddToSaleDoc" prefHeight="25.0" prefWidth="100.0" text="Dodaj" />
+             </VBox>
+         </TitledPane>
+        <TitledPane fx:id="titledPaneAddStoreDoc" alignment="CENTER" animated="false" collapsible="false" disable="true" prefHeight="67.0" prefWidth="100.0" text="Do magazynu" visible="false">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <VBox alignment="CENTER" spacing="5.0">
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </padding>
+                <Button alignment="CENTER" mnemonicParsing="false" onAction="#onAddToStoreDoc" prefHeight="25.0" prefWidth="100.0" text="Dodaj" />
+            </VBox>
+        </TitledPane>
+    </Pane>
+    </HBox>
+    <TableView fx:id="productTableView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onKeyPressed" onMouseClicked="#onMouseClicked" prefHeight="505.0">
+      <columns>
+          <TableColumn fx:id="idCol" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" text="ID" />
+          <TableColumn fx:id="rodzajCol" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="Rodzaj" />
+          <TableColumn fx:id="nazwaCol" maxWidth="300.0" minWidth="150.0" prefWidth="150.0" text="Nazwa" />
+          <TableColumn fx:id="quantityCol" maxWidth="300.0" minWidth="70.0" prefWidth="70.0" text="Ilość" />
+          <TableColumn fx:id="kodCol" maxWidth="300.0" minWidth="100.0" prefWidth="130.0" text="Kod produktu/usługi" />
+          <TableColumn fx:id="nrKatCol" maxWidth="300.0" minWidth="90.0" prefWidth="90.0" text="Nr katalogowy" />
+          <TableColumn fx:id="pkwIuCnCol" maxWidth="300.0" minWidth="90.0" prefWidth="90.0" text="PKWiU/CN" />
+          <TableColumn fx:id="kreskowyCol" maxWidth="300.0" minWidth="90.0" prefWidth="90.0" text="Kod kreskowy" />
+          <TableColumn fx:id="jmCol" maxWidth="35.0" minWidth="40.0" prefWidth="35.0" text="j.m." />
+          <TableColumn fx:id="vatCol" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="VAT[%]" />
+          <TableColumn fx:id="cNettoCol" maxWidth="150.0" minWidth="70.0" prefWidth="70.0" text="Cena netto" />
+          <TableColumn fx:id="cBruttoCol" maxWidth="150.0" minWidth="75.0" prefWidth="75.0" text="Cena brutto" />
+          <TableColumn fx:id="productDataBtnCol" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+          <TableColumn fx:id="editBtnCol" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+          <TableColumn fx:id="deleteBtnCol" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+      </columns>
+    </TableView>
+</VBox>

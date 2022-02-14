@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import utils.fxmlFieldUtils.*?>
+
+<VBox alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.warehouseControllers.storeDocControllers.AddStoreDocController">
+    <ScrollPane maxWidth="-Infinity">
+        <VBox minWidth="-Infinity" spacing="2.0">
+            <padding>
+                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </padding>
+            <HBox alignment="TOP_CENTER" spacing="20.0">
+                <TitledPane animated="false" collapsible="false" text="Firma">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                    <VBox fillWidth="false" spacing="2.0">
+                        <padding>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </padding>
+                        <HBox spacing="15.0">
+                            <VBox spacing="2.0">
+                                <HBox spacing="5.0">
+                                    <VBox>
+                                        <OnlyNumberInField fx:id="nipBus" prefHeight="25.0" prefWidth="114.0" promptText="np.: 1234567890" />
+                                        <Label nodeOrientation="RIGHT_TO_LEFT" text="NIP">
+                                            <graphic>
+                                                <Label fx:id="wrongNipBus" text="*" textFill="RED">
+                                                    <font>
+                                                        <Font size="10.0" />
+                                                    </font>
+                                                </Label>
+                                            </graphic>
+                                            <font>
+                                                <Font size="10.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets right="5.0" />
+                                            </padding>
+                                        </Label>
+                                    </VBox>
+                                    <VBox>
+                                        <TextField fx:id="phoneBus" prefHeight="25.0" prefWidth="114.0" promptText="np: +48999888444" />
+                                        <Label nodeOrientation="RIGHT_TO_LEFT" text="telefon">
+                                            <font>
+                                                <Font size="10.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets right="5.0" />
+                                            </padding>
+                                            <graphic>
+                                                <Label fx:id="wrongPhoneBus" text="*" textFill="RED">
+                                                    <font>
+                                                        <Font size="10.0" />
+                                                    </font>
+                                                </Label>
+                                            </graphic>
+                                        </Label>
+                                    </VBox>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                                </HBox>
+                                <VBox>
+                                    <TextField fx:id="nameBus" prefHeight="25.0" prefWidth="233.0" promptText="pełna nazwa firmy" />
+                                    <Label nodeOrientation="RIGHT_TO_LEFT" text="nazwa">
+                                        <graphic>
+                                            <Label fx:id="wrongNameBus" text="*" textFill="RED">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Label>
+                                        </graphic>
+                                        <font>
+                                            <Font size="10.0" />
+                                        </font>
+                                        <padding>
+                                            <Insets right="5.0" />
+                                        </padding>
+                                    </Label>
+                                </VBox>
+                                <VBox>
+                                    <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                        <VBox>
+                                            <TextField fx:id="townBus" prefHeight="25.0" prefWidth="153.0" promptText="np.: Warszawa" />
+                                            <Label nodeOrientation="RIGHT_TO_LEFT" text="miejscowość">
+                                                <graphic>
+                                                    <Label fx:id="wrongTownBus" text="*" textFill="RED">
+                                                        <font>
+                                                            <Font size="10.0" />
+                                                        </font>
+                                                    </Label>
+                                                </graphic>
+                                                <padding>
+                                                    <Insets right="5.0" />
+                                                </padding>
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Label>
+                                        </VBox>
+                                        <VBox>
+                                            <HBox alignment="CENTER_LEFT">
+                                                <OnlyNumberInField fx:id="zc1Bus" prefHeight="25.0" prefWidth="30.0" promptText="00" />
+                                                <Label text="-" />
+                                                <OnlyNumberInField fx:id="zc2Bus" prefWidth="40.0" promptText="000" />
+                                            </HBox>
+                                            <Label nodeOrientation="RIGHT_TO_LEFT" text="kod pocztowy">
+                                                <graphic>
+                                                    <Pane>
+                                                        <Label fx:id="wrongZc1Bus" text="*" textFill="RED">
+                                                            <font>
+                                                                <Font size="10.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="wrongZc2Bus" text="*" textFill="RED">
+                                                            <font>
+                                                                <Font size="10.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </Pane>
+                                                </graphic>
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                                <VBox.margin>
+                                                    <Insets />
+                                                </VBox.margin>
+                                                <padding>
+                                                    <Insets right="5.0" />
+                                                </padding>
+                                            </Label>
+                                        </VBox>
+                                    </HBox>
+                                </VBox>
+                                <VBox>
+                                    <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                        <VBox>
+                                            <TextField fx:id="streetBus" prefHeight="25.0" prefWidth="153.0" promptText="np.: Warszawska" />
+                                            <Label nodeOrientation="RIGHT_TO_LEFT" text="ulica">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                                <padding>
+                                                    <Insets right="5.0" />
+                                                </padding>
+                                            </Label>
+                                        </VBox>
+                                        <VBox>
+                                            <TextField fx:id="addressBus" prefHeight="25.0" prefWidth="75.0" promptText="np.: 11/3c" />
+                                            <Label nodeOrientation="RIGHT_TO_LEFT" text="numer">
+                                                <graphic>
+                                                    <Label fx:id="wrongAddressBus" text="*" textFill="RED">
+                                                        <font>
+                                                            <Font size="10.0" />
+                                                        </font>
+                                                    </Label>
+                                                </graphic>
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                                <padding>
+                                                    <Insets right="5.0" />
+                                                </padding>
+                                            </Label>
+                                        </VBox>
+                                    </HBox>
+                                </VBox>
+                            </VBox>
+                            <Button mnemonicParsing="false" onAction="#onSetBusiness" prefHeight="23.0" prefWidth="23.0" text="+">
+                                <font>
+                                    <Font size="10.0" />
+                                </font>
+                            </Button>
+                        </HBox>
+                        <VBox>
+                            <HBox>
+                                <OnlyNumberInField fx:id="bank1Bus" prefHeight="25.0" prefWidth="28.0" promptText="00" />
+                                <OnlyNumberInField fx:id="bank2Bus" prefWidth="41.0" promptText="0000" />
+                                <OnlyNumberInField fx:id="bank3Bus" prefWidth="41.0" promptText="0000" />
+                                <OnlyNumberInField fx:id="bank4Bus" prefWidth="41.0" promptText="0000" />
+                                <OnlyNumberInField fx:id="bank5Bus" prefWidth="41.0" promptText="0000" />
+                                <OnlyNumberInField fx:id="bank6Bus" prefWidth="41.0" promptText="0000" />
+                                <OnlyNumberInField fx:id="bank7Bus" prefWidth="41.0" promptText="0000" />
+                            </HBox>
+                            <Label nodeOrientation="RIGHT_TO_LEFT" text="numer rachunku bankowego">
+                                <font>
+                                    <Font size="10.0" />
+                                </font>
+                                <graphic>
+                                    <Label fx:id="wrongBankBus" text="*" textFill="RED">
+                                        <font>
+                                            <Font size="10.0" />
+                                        </font>
+                                        <graphic>
+                                            <Pane visible="false">
+                                                <Label fx:id="wrongBank1Bus" text="*" textFill="RED">
+                                                    <font>
+                                                        <Font size="10.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="wrongBank2Bus" text="*" textFill="RED">
+                                                    <font>
+                                                        <Font size="10.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="wrongBank3Bus" text="*" textFill="RED">
+                                                    <font>
+                                                        <Font size="10.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="wrongBank4Bus" text="*" textFill="RED">
+                                                    <font>
+                                                        <Font size="10.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="wrongBank5Bus" text="*" textFill="RED">
+                                                    <font>
+                                                        <Font size="10.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="wrongBank6Bus" text="*" textFill="RED">
+                                                    <font>
+                                                        <Font size="10.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="wrongBank7Bus" text="*" textFill="RED">
+                                                    <font>
+                                                        <Font size="10.0" />
+                                                    </font>
+                                                </Label>
+                                            </Pane>
+                                        </graphic>
+                                    </Label>
+                                </graphic>
+                                <padding>
+                                    <Insets right="5.0" />
+                                </padding>
+                            </Label>
+                        </VBox>
+                    </VBox>
+                </TitledPane>
+                <TitledPane fx:id="titledPaneContractor" animated="false" collapsible="false" prefHeight="248.0" text="Kontrahent">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                    <VBox fillWidth="false">
+                        <padding>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </padding>
+                        <HBox spacing="15.0">
+                            <VBox>
+                                <Pane>
+                                    <OnlyNumberInField fx:id="peselCon" prefHeight="25.0" prefWidth="195.0" promptText="np.: 99010100112" />
+                                    <OnlyNumberInField fx:id="nipCon" prefHeight="25.0" prefWidth="195.0" promptText="np.: 1234567890" />
+                                </Pane>
+                                <HBox spacing="15.0">
+                                    <HBox spacing="1.0">
+                                        <RadioButton fx:id="nipIdConRbtn" mnemonicParsing="false" onAction="#onChooseNipOrPesel" selected="true">
+                                            <font>
+                                                <Font size="8.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                            <padding>
+                                                <Insets top="1.0" />
+                                            </padding>
+                                 <toggleGroup>
+                                                <ToggleGroup fx:id="idPersonNumber" />
+                                 </toggleGroup>
+                                        </RadioButton>
+                                        <Label nodeOrientation="RIGHT_TO_LEFT" text="NIP">
+                                            <graphic>
+                                                <Label fx:id="wrongNipCon" text="*" textFill="RED">
+                                                    <font>
+                                                        <Font size="10.0" />
+                                                    </font>
+                                                </Label>
+                                            </graphic>
+                                            <font>
+                                                <Font size="10.0" />
+                                            </font>
+                                        </Label>
+                                    </HBox>
+                                    <HBox fx:id="peselIdConHbox">
+                                        <RadioButton fx:id="peselIdConRbtn" mnemonicParsing="false" onAction="#onChooseNipOrPesel" toggleGroup="$idPersonNumber">
+                                            <padding>
+                                                <Insets top="1.0" />
+                                            </padding>
+                                            <font>
+                                                <Font size="8.0" />
+                                            </font>
+                                        </RadioButton>
+                                        <Label nodeOrientation="RIGHT_TO_LEFT" text="PESEL">
+                                            <graphic>
+                                                <Label fx:id="wrongPeselCon" text="*" textFill="RED">
+                                                    <font>
+                                                        <Font size="10.0" />
+                                                    </font>
+                                                </Label>
+                                            </graphic>
+                                            <font>
+                                                <Font size="10.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets right="1.0" />
+                                            </padding>
+                                        </Label>
+                                    </HBox>
+                                    <HBox fx:id="noneIdConHbox" spacing="1.0" visible="false">
+                                        <RadioButton fx:id="noneIdConRbtn" mnemonicParsing="false" onAction="#onChooseNipOrPesel" toggleGroup="$idPersonNumber">
+                                            <font>
+                                                <Font size="8.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets top="1.0" />
+                                            </padding>
+                                        </RadioButton>
+                                        <Label text="brak">
+                                            <font>
+                                                <Font size="10.0" />
+                                            </font>
+                                        </Label>
+                                    </HBox>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                                </HBox>
+                            </VBox>
+                            <Button mnemonicParsing="false" onAction="#onSetContractor" prefHeight="23.0" prefWidth="23.0" text="+">
+                                <font>
+                                    <Font size="10.0" />
+                                </font>
+                            </Button>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                        </HBox>
+                        <VBox fx:id="vBoxContractorData" spacing="2.0">
+                            <VBox>
+                                <TextField fx:id="nameCon" prefHeight="25.0" prefWidth="233.0"
+                                           promptText="pełna nazwa firmy"/>
+                                <Label nodeOrientation="RIGHT_TO_LEFT" text="nazwa">
+                                    <graphic>
+                                        <Label fx:id="wrongNameCon" text="*" textFill="RED">
+                                            <font>
+                                                <Font size="10.0"/>
+                                            </font>
+                                        </Label>
+                                    </graphic>
+                                    <font>
+                                        <Font size="10.0"/>
+                                    </font>
+                                    <padding>
+                                        <Insets right="5.0"/>
+                                    </padding>
+                                </Label>
+                            </VBox>
+                            <VBox>
+                                <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                    <VBox>
+                                        <TextField fx:id="townCon" prefHeight="25.0" prefWidth="153.0"
+                                                   promptText="np.: Warszawa"/>
+                                        <Label nodeOrientation="RIGHT_TO_LEFT" text="miejscowość">
+                                            <graphic>
+                                                <Label fx:id="wrongTownCon" text="*" textFill="RED">
+                                                    <font>
+                                                        <Font size="10.0"/>
+                                                    </font>
+                                                </Label>
+                                            </graphic>
+                                            <padding>
+                                                <Insets right="5.0"/>
+                                            </padding>
+                                            <font>
+                                                <Font size="10.0"/>
+                                            </font>
+                                        </Label>
+                                    </VBox>
+                                    <VBox>
+                                        <HBox alignment="CENTER_LEFT">
+                                            <OnlyNumberInField fx:id="zc1Con" prefHeight="25.0" prefWidth="30.0"
+                                                               promptText="00"/>
+                                            <Label text="-"/>
+                                            <OnlyNumberInField fx:id="zc2Con" prefWidth="40.0" promptText="000"/>
+                                        </HBox>
+                                        <Label nodeOrientation="RIGHT_TO_LEFT" text="kod pocztowy">
+                                            <graphic>
+                                                <Pane>
+                                                    <Label fx:id="wrongZc1Con" text="*" textFill="RED">
+                                                        <font>
+                                                            <Font size="10.0"/>
+                                                        </font>
+                                                    </Label>
+                                                    <Label fx:id="wrongZc2Con" text="*" textFill="RED">
+                                                        <font>
+                                                            <Font size="10.0"/>
+                                                        </font>
+                                                    </Label>
+                                                </Pane>
+                                            </graphic>
+                                            <font>
+                                                <Font size="10.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets/>
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets right="5.0"/>
+                                            </padding>
+                                        </Label>
+                                    </VBox>
+                                </HBox>
+                            </VBox>
+                            <VBox>
+                                <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                    <VBox>
+                                        <TextField fx:id="streetCon" prefHeight="25.0" prefWidth="153.0"
+                                                   promptText="np.: Warszawska"/>
+                                        <Label nodeOrientation="RIGHT_TO_LEFT" text="ulica">
+                                            <font>
+                                                <Font size="10.0"/>
+                                            </font>
+                                            <padding>
+                                                <Insets right="5.0"/>
+                                            </padding>
+                                        </Label>
+                                    </VBox>
+                                    <VBox>
+                                        <TextField fx:id="addressCon" prefHeight="25.0" prefWidth="75.0"
+                                                   promptText="np.: 11/3c"/>
+                                        <Label nodeOrientation="RIGHT_TO_LEFT" text="numer">
+                                            <graphic>
+                                                <Label fx:id="wrongAddressCon" text="*" textFill="RED">
+                                                    <font>
+                                                        <Font size="10.0"/>
+                                                    </font>
+                                                </Label>
+                                            </graphic>
+                                            <font>
+                                                <Font size="10.0"/>
+                                            </font>
+                                            <padding>
+                                                <Insets right="5.0"/>
+                                            </padding>
+                                        </Label>
+                                    </VBox>
+                                </HBox>
+                            </VBox>
+                        </VBox>
+                    </VBox>
+                </TitledPane>
+                <TitledPane fx:id="titleTypeDoc" animated="false" collapsible="false" prefHeight="248.0">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                    <VBox alignment="TOP_CENTER" prefHeight="218.0" spacing="2.0">
+                        <padding>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </padding>
+                        <HBox>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <VBox>
+                                <HBox>
+                                    <HBox>
+                                        <Pane>
+                                            <HBox fx:id="enterDocHbox_Number" alignment="CENTER" prefHeight="30.0" prefWidth="140.0">
+                                                <Label fx:id="typeDoc_Number" text="..../">
+                                                    <font>
+                                                        <Font size="16.0" />
+                                                    </font>
+                                                </Label>
+                                                <OnlyNumberInField fx:id="counterDoc_Number" alignment="CENTER" prefWidth="50.0" />
+                                                <Label fx:id="dataDoc_Number" text="/........">
+                                                    <font>
+                                                        <Font size="16.0" />
+                                                    </font>
+                                                </Label>
+                                            </HBox>
+                                            <HBox fx:id="descriptionDocHbox_Number" alignment="CENTER" prefHeight="30.0" prefWidth="140.0" visible="false">
+                                                <Label fx:id="docNumber" text="..../..../........">
+                                                    <font>
+                                                        <Font size="16.0" />
+                                                    </font>
+                                                </Label>
+                                            </HBox>
+                                        </Pane>
+                                    </HBox>
+                                    <Label fx:id="wrongNumber" text="*" textFill="RED">
+                                        <font>
+                                            <Font size="10.0" />
+                                        </font>
+                                    </Label>
+                                </HBox>
+                                <Label fx:id="notUniqueDocNumber" text="Faktura o takim numerze istnieje" textFill="RED" visible="false">
+                                    <font>
+                                        <Font size="10.0" />
+                                    </font>
+                                </Label>
+                            </VBox>
+                            <VBox alignment="CENTER">
+                                <CheckBox fx:id="autoNumbering" mnemonicParsing="false" onAction="#onSetAutoNumber" selected="true" text="auto">
+                                    <font>
+                                        <Font size="9.0" />
+                                    </font>
+                                </CheckBox>
+                                <Label text="numeracja">
+                                    <font>
+                                        <Font size="9.0" />
+                                    </font>
+                                </Label>
+                            </VBox>
+                        </HBox>
+                        <Separator prefWidth="185.0">
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                        </Separator>
+                        <VBox fx:id="additionalDocVbox" visible="false">
+                            <TextField fx:id="additionalDocTf" />
+                            <Label fx:id="additionalDocLabel" nodeOrientation="RIGHT_TO_LEFT" text="...">
+                                <font>
+                                    <Font size="10.0" />
+                                </font>
+                                <VBox.margin>
+                                    <Insets />
+                                </VBox.margin>
+                                <padding>
+                                    <Insets right="5.0" />
+                                </padding>
+                            </Label>
+                        </VBox>
+                        <HBox>
+                            <VBox>
+                                <TextField fx:id="issuePlace" prefWidth="185.0" />
+                                <Label nodeOrientation="RIGHT_TO_LEFT" text="miejsce wystawienia">
+                                    <graphic>
+                                        <Label fx:id="wrongIssuePlace" text="*" textFill="RED">
+                                            <font>
+                                                <Font size="10.0" />
+                                            </font>
+                                        </Label>
+                                    </graphic>
+                                    <font>
+                                        <Font size="10.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                    <padding>
+                                        <Insets right="5.0" />
+                                    </padding>
+                                </Label>
+                            </VBox>
+                        </HBox>
+                        <VBox>
+                            <DatePicker fx:id="issueDate" prefWidth="185.0" />
+                            <Label nodeOrientation="RIGHT_TO_LEFT" text="data wystawienia">
+                                <graphic>
+                                    <Label fx:id="wrongIssueDate" text="*" textFill="RED">
+                                        <font>
+                                            <Font size="10.0" />
+                                        </font>
+                                    </Label>
+                                </graphic>
+                                <font>
+                                    <Font size="10.0" />
+                                </font>
+                                <VBox.margin>
+                                    <Insets />
+                                </VBox.margin>
+                                <padding>
+                                    <Insets right="5.0" />
+                                </padding>
+                            </Label>
+                        </VBox>
+                    </VBox>
+                </TitledPane>
+            </HBox>
+            <VBox alignment="TOP_CENTER" spacing="2.0">
+                <HBox alignment="CENTER_RIGHT">
+                    <Button fx:id="oddProductBtn" disable="true" mnemonicParsing="false" onAction="#onOddProduct" prefHeight="23.0" prefWidth="23.0" text="-">
+                        <font>
+                            <Font size="10.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="addProductBtn" mnemonicParsing="false" onAction="#onAddProduct" prefHeight="23.0" prefWidth="23.0" text="+">
+                        <font>
+                            <Font size="10.0" />
+                        </font>
+                    </Button>
+                </HBox>
+                <TableView fx:id="productsTV" editable="true" prefHeight="150.0" prefWidth="770.0">
+                    <columns>
+                        <TableColumn fx:id="lpCol" editable="false" minWidth="23.0" prefWidth="23.0" text="Lp" />
+                        <TableColumn fx:id="nameCol" minWidth="-1.0" prefWidth="300.0" text="Nazwa - Opis" />
+                        <TableColumn fx:id="quantityCol" minWidth="50.0" prefWidth="50.0" text="Ilość" />
+                        <TableColumn fx:id="editQuantityBtnCol" minWidth="30.0" prefWidth="30.0" />
+                        <TableColumn fx:id="unitCol" minWidth="30.0" prefWidth="30.0" text="j.m" />
+                        <TableColumn fx:id="unitPriceNetCol" minWidth="84.0" prefWidth="84.0" text="Cena netto" />
+                        <TableColumn fx:id="vatCol" minWidth="47.0" prefWidth="47.0" text="VAT[%]" />
+                        <TableColumn fx:id="discountCol" minWidth="57.0" prefWidth="57.0" text="Rabat[%]" />
+                        <TableColumn fx:id="editDiscountBtnCol" minWidth="30.0" prefWidth="30.0" />
+                        <TableColumn fx:id="volNetCol" minWidth="105.0" prefWidth="105.0" text="Wartość netto" />
+                        <TableColumn fx:id="volCostCol" minWidth="105.0" prefWidth="105.0" text="Koszt" visible="false" />
+                    </columns>
+                </TableView>
+                <HBox alignment="TOP_RIGHT" spacing="2.0">
+                    <VBox spacing="2.0">
+                         <TitledPane animated="false" collapsible="false" text="Uwagi">
+                             <font>
+                                 <Font size="11.0" />
+                             </font>
+                             <VBox spacing="2.0">
+                                 <padding>
+                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                 </padding>
+                                 <TextArea fx:id="commentTa" prefHeight="90.0" prefWidth="256.0"/>
+                             </VBox>
+                         </TitledPane>
+                        <TitledPane fx:id="titledPaneIssuer" animated="false" collapsible="false" text="Wystawił">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                            <VBox>
+                                <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </padding>
+                                <TextField fx:id="issued" prefWidth="200.0" />
+                                <Label nodeOrientation="RIGHT_TO_LEFT" text="imię i nazwisko">
+                                    <font>
+                                        <Font size="10.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets right="5.0" />
+                                    </padding>
+                                    <graphic>
+                                        <Label fx:id="wrongIssued" text="*" textFill="RED">
+                                            <font>
+                                                <Font size="10.0" />
+                                            </font>
+                                        </Label>
+                                    </graphic>
+                                </Label>
+                            </VBox>
+                        </TitledPane>
+                    </VBox>
+                    <VBox prefWidth="500.0">
+                        <HBox alignment="CENTER_RIGHT">
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                            </padding>
+                            <VBox alignment="CENTER_RIGHT" prefWidth="120.0">
+                                <Label text="Razem do zapłaty:" />
+                                <Label text="Słownie:" />
+                            </VBox>
+                            <VBox alignment="CENTER_RIGHT" prefWidth="390.0">
+                                <Label fx:id="priceToPay">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="priceToPayInWords" text="...">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                            </VBox>
+                        </HBox>
+                    </VBox>
+                </HBox>
+            </VBox>
+            <VBox alignment="TOP_CENTER">
+                <Label fx:id="descDataISCorrect" text="Wprowadź poprawnie wszystkie zaznaczone pola (*)" textFill="RED">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Label>
+                <Label fx:id="descFillTable" text="Uzupełnij tabelę" textFill="RED">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Label>
+            </VBox>
+            <HBox alignment="TOP_CENTER" spacing="100.0">
+                <padding>
+                    <Insets bottom="5.0" />
+                </padding>
+                <Button mnemonicParsing="false" onAction="#clearAllFieldsAction" prefHeight="30.0" prefWidth="100.0" text="Wyczyść" />
+                <Button mnemonicParsing="false" onAction="#onCancel" prefHeight="30.0" prefWidth="100.0" text="Anuluj" />
+                <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#onSave" prefHeight="30.0" prefWidth="100.0" text="Zapisz" />
+            </HBox>
+        </VBox>
+    </ScrollPane>
+</VBox>

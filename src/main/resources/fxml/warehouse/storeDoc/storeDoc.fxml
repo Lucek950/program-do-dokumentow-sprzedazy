@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1075.0" spacing="5.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.warehouseControllers.storeDocControllers.StoreDocController">
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+    <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0">
+        <VBox>
+            <ComboBox fx:id="filtersCbox" prefWidth="150.0" />
+            <Label text="filtruj po polu">
+                <font>
+                    <Font size="10.0" />
+                </font>
+                <padding>
+                    <Insets left="5.0" />
+                </padding>
+            </Label>
+            <TextField fx:id="searchField" promptText="Szukaj">
+                <VBox.margin>
+                    <Insets top="2.0" />
+                </VBox.margin>
+            </TextField>
+        </VBox>
+        <TitledPane alignment="CENTER" animated="false" collapsible="false" prefHeight="67.0" prefWidth="120.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <VBox alignment="CENTER" spacing="5.0">
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </padding>
+                <Button mnemonicParsing="false" onAction="#onAddDoc" prefHeight="25.0" prefWidth="100.0" text="Dodaj" />
+            </VBox>
+         <graphic>
+            <ComboBox fx:id="typeDoc" prefWidth="160.0" />
+         </graphic>
+         <effect>
+            <ColorAdjust />
+         </effect>
+        </TitledPane>
+    </HBox>
+    <TableView fx:id="docTableView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0">
+        <columns>
+            <TableColumn fx:id="idCol" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="numberCol" maxWidth="80.0" minWidth="80.0" text="Numer" />
+            <TableColumn fx:id="dateCol" maxWidth="200.0" minWidth="110.0" prefWidth="110.0" text="Data wystawienia" />
+            <TableColumn fx:id="contractorCol" maxWidth="300.0" minWidth="180.0" prefWidth="180.0" text="Kontrahent" />
+            <TableColumn fx:id="nipAndPeselCol" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="NIP/PESEL" />
+            <TableColumn fx:id="volNetCol" maxWidth="300.0" minWidth="100.0" prefWidth="100.0" text="Wartość netto" />
+            <TableColumn fx:id="costCol" maxWidth="300.0" minWidth="100.0" prefWidth="100.0" text="Koszt" visible="false" />
+            <TableColumn fx:id="relatedDocCol" maxWidth="300.0" minWidth="140.0" prefWidth="140.0" text="Powiązany dokument" />
+            <TableColumn fx:id="aboutBtnCol" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+            <TableColumn fx:id="editBtnCol" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+            <TableColumn fx:id="deleteBtnCol" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+            <TableColumn fx:id="generateBtnCol" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+        </columns>
+    </TableView>
+</VBox>

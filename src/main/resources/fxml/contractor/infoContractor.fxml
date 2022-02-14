@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.contactorControllers.InfoContractorController">
+   <ScrollPane maxWidth="-Infinity">
+      <VBox alignment="TOP_CENTER" minWidth="-Infinity" spacing="10.0">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+         </padding>
+         <HBox alignment="TOP_CENTER">
+            <TitledPane collapsible="false" prefHeight="279.0" prefWidth="270.0"
+                        text="Dane kontrahenta do faktury">
+               <VBox spacing="5.0">
+                  <VBox>
+                     <Label fx:id="nameLabel">
+                        <font>
+                           <Font size="14.0"/>
+                        </font>
+                     </Label>
+                     <Separator prefWidth="200.0"/>
+                     <Label text="nazwa">
+                        <font>
+                           <Font size="10.0"/>
+                        </font>
+                     </Label>
+                  </VBox>
+                  <HBox alignment="CENTER_LEFT">
+                     <Pane prefWidth="200.0">
+                        <VBox fx:id="nipVbox">
+                           <Label fx:id="nipLabel">
+                              <font>
+                                 <Font size="14.0"/>
+                              </font>
+                           </Label>
+                           <Separator prefWidth="250.0"/>
+                           <Label text="NIP">
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                           </Label>
+                        </VBox>
+                        <VBox fx:id="peselVbox" visible="false">
+                           <Label fx:id="peselLabel">
+                              <font>
+                                 <Font size="14.0"/>
+                              </font>
+                           </Label>
+                           <Separator prefWidth="250.0"/>
+                           <Label text="PESEL" textFill="RED">
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                           </Label>
+                        </VBox>
+                     </Pane>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <VBox prefWidth="180.0">
+                        <Label fx:id="townLabel">
+                           <font>
+                              <Font size="14.0"/>
+                           </font>
+                        </Label>
+                        <Separator/>
+                        <Label text="miejscowość">
+                           <font>
+                              <Font size="10.0"/>
+                           </font>
+                        </Label>
+                     </VBox>
+                     <VBox prefWidth="65.0">
+                        <Label fx:id="zipCodeLabel">
+                           <font>
+                              <Font size="14.0"/>
+                           </font>
+                        </Label>
+                        <Separator/>
+                        <Label text="kod pocztowy">
+                           <font>
+                              <Font size="10.0"/>
+                           </font>
+                        </Label>
+                     </VBox>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <VBox prefWidth="180.0">
+                        <Label fx:id="streetLabel">
+                           <font>
+                              <Font size="14.0"/>
+                           </font>
+                        </Label>
+                        <Separator/>
+                        <Label text="ulica">
+                           <font>
+                              <Font size="10.0"/>
+                           </font>
+                        </Label>
+                     </VBox>
+                     <VBox prefWidth="65.0">
+                        <Label fx:id="numberLabel">
+                           <font>
+                              <Font size="14.0"/>
+                           </font>
+                        </Label>
+                        <Separator/>
+                        <Label text="numer">
+                           <font>
+                              <Font size="10.0"/>
+                           </font>
+                        </Label>
+                     </VBox>
+                  </HBox>
+                  <VBox>
+                     <Label fx:id="countryLabel">
+                        <font>
+                           <Font size="14.0"/>
+                        </font>
+                     </Label>
+                     <Separator prefWidth="200.0"/>
+                     <Label text="państwo">
+                        <font>
+                           <Font size="10.0"/>
+                        </font>
+                     </Label>
+                  </VBox>
+               </VBox>
+            </TitledPane>
+            <VBox>
+               <HBox>
+                  <TitledPane collapsible="false" prefHeight="213.0" prefWidth="270.0"
+                              text="Dane korenspondencji">
+                     <VBox spacing="5.0">
+                        <HBox spacing="5.0">
+                           <VBox prefWidth="180.0">
+                              <Label fx:id="townPostLabel">
+                                 <font>
+                                    <Font size="14.0"/>
+                                 </font>
+                              </Label>
+                              <Separator/>
+                              <Label text="miejscowość">
+                                 <font>
+                                    <Font size="10.0"/>
+                                 </font>
+                              </Label>
+                           </VBox>
+                           <VBox prefWidth="65.0">
+                              <Label fx:id="zipCodePostLabel">
+                                 <font>
+                                    <Font size="14.0"/>
+                                 </font>
+                              </Label>
+                              <Separator/>
+                              <Label text="kod pocztowy">
+                                 <font>
+                                    <Font size="10.0"/>
+                                 </font>
+                              </Label>
+                           </VBox>
+                        </HBox>
+                        <HBox spacing="5.0">
+                           <VBox prefWidth="180.0">
+                              <Label fx:id="streetPostLabel">
+                                 <font>
+                                    <Font size="14.0"/>
+                                 </font>
+                              </Label>
+                              <Separator/>
+                              <Label text="ulica">
+                                 <font>
+                                    <Font size="10.0"/>
+                                 </font>
+                              </Label>
+                           </VBox>
+                           <VBox prefWidth="65.0">
+                              <Label fx:id="numberPostLabel">
+                                 <font>
+                                    <Font size="14.0"/>
+                                 </font>
+                              </Label>
+                              <Separator/>
+                              <Label text="numer">
+                                 <font>
+                                    <Font size="10.0"/>
+                                 </font>
+                              </Label>
+                           </VBox>
+                        </HBox>
+                        <VBox>
+                           <Label fx:id="countryPostLabel">
+                              <font>
+                                 <Font size="14.0"/>
+                              </font>
+                           </Label>
+                           <Separator prefWidth="200.0"/>
+                           <Label text="państwo">
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                           </Label>
+                        </VBox>
+                     </VBox>
+                  </TitledPane>
+                  <TitledPane collapsible="false" prefHeight="213.0" prefWidth="220.0" text="Kontakt">
+                     <VBox spacing="5.0">
+                        <VBox>
+                           <Label fx:id="phoneLabel">
+                              <font>
+                                 <Font size="14.0"/>
+                              </font>
+                           </Label>
+                           <Separator prefWidth="200.0"/>
+                           <Label text="telefon">
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                           </Label>
+                        </VBox>
+                        <VBox>
+                           <Label fx:id="faxLabel">
+                              <font>
+                                 <Font size="14.0"/>
+                              </font>
+                           </Label>
+                           <Separator prefWidth="200.0"/>
+                           <Label text="fax">
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                           </Label>
+                        </VBox>
+                        <VBox>
+                           <Label fx:id="emailLabel">
+                              <font>
+                                 <Font size="14.0"/>
+                              </font>
+                           </Label>
+                           <Separator prefWidth="200.0"/>
+                           <Label text="e-mail">
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                           </Label>
+                        </VBox>
+                        <VBox>
+                           <Label fx:id="websiteLabel">
+                              <font>
+                                 <Font size="14.0"/>
+                              </font>
+                           </Label>
+                           <Separator prefWidth="200.0"/>
+                           <Label text="strona">
+                              <font>
+                                 <Font size="10.0"/>
+                              </font>
+                           </Label>
+                        </VBox>
+                     </VBox>
+                  </TitledPane>
+               </HBox>
+               <TitledPane collapsible="false" text="Numer rachunku bankowego">
+                  <VBox>
+                     <Label fx:id="bankLabel" text="__-____-____-____-____-____-____">
+                        <font>
+                           <Font size="14.0"/>
+                        </font>
+                     </Label>
+                  </VBox>
+               </TitledPane>
+            </VBox>
+         </HBox>
+         <Button mnemonicParsing="false" onAction="#onClose" prefHeight="30.0" prefWidth="100.0" text="Wyjdź">
+            <VBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </VBox.margin>
+         </Button>
+      </VBox>
+   </ScrollPane>
+</VBox>

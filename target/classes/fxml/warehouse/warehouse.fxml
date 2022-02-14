@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<TabPane fx:id="tabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.warehouseControllers.WarehouseController">
+  <Tab text="Towary i usługi">
+    <fx:include fx:id="product" source="product/product.fxml" />
+  </Tab>
+  <Tab onSelectionChanged="#onSelectionReceivingDoc" text="Przyjęcia magazynowe">
+    <fx:include fx:id="releaseDoc" source="storeDoc/storeDoc.fxml" />
+  </Tab>
+  <Tab onSelectionChanged="#onSelectionReleaseDoc" text="Wydania magazynowe">
+    <fx:include fx:id="receivingDoc" source="storeDoc/storeDoc.fxml" />
+  </Tab>
+</TabPane>

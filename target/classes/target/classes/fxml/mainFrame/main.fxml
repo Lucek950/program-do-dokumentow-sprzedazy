@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane prefHeight="700.0" prefWidth="1104.0" xmlns="http://javafx.com/javafx/11.0.2"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.mainControllers.MainController">
+   <TitledPane animated="false" collapsible="false" expanded="false">
+      <graphic>
+         <BorderPane fx:id="mainFrame" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                     minHeight="-Infinity" minWidth="-Infinity">
+            <top>
+               <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+                     minWidth="-Infinity" BorderPane.alignment="TOP_LEFT">
+                  <MenuBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                           minHeight="-Infinity" minWidth="-Infinity">
+                     <Menu mnemonicParsing="false" text="Firma">
+                        <MenuItem mnemonicParsing="false" onAction="#onBusinessInfo" text="Dane"/>
+                        <MenuItem mnemonicParsing="false" onAction="#onSetBusiness" text="Zmień dane"/>
+                     </Menu>
+                     <Menu mnemonicParsing="false" text="Ustawienia">
+                        <MenuItem mnemonicParsing="false" onAction="#onSetSampleData"
+                                  text="Wstaw przykładowe dane"/>
+                     </Menu>
+                  </MenuBar>
+                  <fx:include fx:id="topMenu" source="topMenu.fxml"/>
+               </VBox>
+            </top>
+            <left>
+               <fx:include fx:id="infoBusiness" source="/fxml/business/infoBusiness.fxml"
+                           BorderPane.alignment="TOP_LEFT"/>
+            </left>
+         </BorderPane>
+      </graphic>
+   </TitledPane>
+</ScrollPane>

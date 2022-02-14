@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.warehouseControllers.productControllers.InfoProductController">
+   <ScrollPane maxWidth="-Infinity">
+      <VBox alignment="TOP_CENTER" minWidth="-Infinity" spacing="5.0">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <TitledPane animated="false" collapsible="false" text="Dane dotyczące towaru lub usługi">
+            <HBox spacing="10.0">
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+               <VBox spacing="10.0">
+                  <VBox spacing="10.0">
+                     <HBox spacing="10.0">
+                        <VBox prefWidth="60.0">
+                           <Label fx:id="typeLabel">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                           <Separator prefWidth="200.0" />
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="rodzaj">
+                              <font>
+                                 <Font size="10.0" />
+                              </font>
+                              <VBox.margin>
+                                 <Insets />
+                              </VBox.margin>
+                              <padding>
+                                 <Insets right="5.0" />
+                              </padding>
+                           </Label>
+                        </VBox>
+                        <VBox prefWidth="250.0">
+                           <Label fx:id="nameLabel">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                           <Separator prefWidth="200.0" />
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="nazwa">
+                              <font>
+                                 <Font size="10.0" />
+                              </font>
+                              <padding>
+                                 <Insets right="5.0" />
+                              </padding>
+                           </Label>
+                        </VBox>
+                     </HBox>
+                     <HBox spacing="10.0">
+                        <VBox prefWidth="25.0">
+                           <Label fx:id="unitLabel">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                           <Separator prefWidth="200.0" />
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="j.m.">
+                              <font>
+                                 <Font size="10.0" />
+                              </font>
+                              <padding>
+                                 <Insets right="5.0" />
+                              </padding>
+                           </Label>
+                        </VBox>
+                        <VBox prefWidth="25.0">
+                           <Label fx:id="saleVatLabel">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                           <Separator prefWidth="200.0" />
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="VAT">
+                              <font>
+                                 <Font size="10.0" />
+                              </font>
+                              <padding>
+                                 <Insets right="5.0" />
+                              </padding>
+                           </Label>
+                        </VBox>
+                        <VBox prefWidth="250.0">
+                           <Label fx:id="gtuLabel" onDragDetected="#onShowGtuContent">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                           <Separator prefWidth="200.0" />
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="grupa GTU">
+                              <padding>
+                                 <Insets right="5.0" />
+                              </padding>
+                              <font>
+                                 <Font size="10.0" />
+                              </font>
+                           </Label>
+                        </VBox>
+                     </HBox>
+                     <HBox spacing="10.0">
+                        <VBox prefWidth="155.0">
+                           <Label fx:id="productCodeLabel">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                           <Separator prefWidth="200.0" />
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="kod towaru/usługi">
+                              <font>
+                                 <Font size="10.0" />
+                              </font>
+                              <padding>
+                                 <Insets right="5.0" />
+                              </padding>
+                           </Label>
+                        </VBox>
+                        <VBox prefWidth="155.0">
+                           <Label fx:id="nrCatalogLabel">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                           <Separator prefWidth="200.0" />
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="nr katalogowy">
+                              <font>
+                                 <Font size="10.0" />
+                              </font>
+                              <padding>
+                                 <Insets right="5.0" />
+                              </padding>
+                           </Label>
+                        </VBox>
+                     </HBox>
+                     <HBox spacing="10.0">
+                        <VBox prefWidth="155.0">
+                           <Label fx:id="pkwIuLabel">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                           <Separator prefWidth="200.0" />
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="PKWiU/CN">
+                              <font>
+                                 <Font size="10.0" />
+                              </font>
+                              <padding>
+                                 <Insets right="5.0" />
+                              </padding>
+                           </Label>
+                        </VBox>
+                        <VBox prefWidth="155.0">
+                           <Label fx:id="barcodeLabel">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                           <Separator prefWidth="200.0" />
+                           <Label nodeOrientation="RIGHT_TO_LEFT" text="kod kreskowy">
+                              <font>
+                                 <Font size="10.0" />
+                              </font>
+                              <padding>
+                                 <Insets right="5.0" />
+                              </padding>
+                           </Label>
+                        </VBox>
+                     </HBox>
+                  </VBox>
+                  <VBox>
+                     <HBox>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" nodeOrientation="RIGHT_TO_LEFT" text="Cena netto [PLN]">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <TextField fx:id="buyNetPriceTf" alignment="CENTER_RIGHT" editable="false" prefWidth="90.0" />
+                        </TitledPane>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" nodeOrientation="RIGHT_TO_LEFT" prefWidth="85.0" text="VAT">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <TextField fx:id="buyVatTf" alignment="CENTER_RIGHT" editable="false" />
+                        </TitledPane>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" text="Cena brutto [PLN]">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <TextField fx:id="buyGrossPriceTf" alignment="CENTER_RIGHT" prefWidth="90.0" />
+                        </TitledPane>
+                     </HBox>
+                     <Label nodeOrientation="RIGHT_TO_LEFT" text="cena zakupu">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                        <padding>
+                           <Insets right="5.0" />
+                        </padding>
+                     </Label>
+                  </VBox>
+               </VBox>
+               <VBox spacing="10.0">
+                  <VBox prefHeight="181.0" prefWidth="340.0">
+                     <TextArea fx:id="descTa" editable="false" prefWidth="428.0">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </TextArea>
+                     <Label nodeOrientation="RIGHT_TO_LEFT" text="opis">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                        <padding>
+                           <Insets right="5.0" />
+                        </padding>
+                     </Label>
+                  </VBox>
+                  <VBox>
+                     <HBox>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" nodeOrientation="RIGHT_TO_LEFT" prefWidth="90.0" text="Cena netto [PLN]">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <TextField fx:id="saleNetPriceTf" alignment="CENTER_RIGHT" editable="false" />
+                        </TitledPane>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" prefWidth="90.0" text="Cena brutto [PLN]">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <TextField fx:id="saleGrossPriceTf" alignment="CENTER_RIGHT" editable="false" />
+                        </TitledPane>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" prefWidth="70.0" text="Narzut [%]">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <TextField fx:id="overheadTf" alignment="CENTER_RIGHT" editable="false" />
+                        </TitledPane>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" prefWidth="90.0" text="Zysk netto [PLN]">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <TextField fx:id="gainNetTf" alignment="CENTER_RIGHT" editable="false" />
+                        </TitledPane>
+                     </HBox>
+                     <Label nodeOrientation="RIGHT_TO_LEFT" text="cena sprzedaży">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                        <padding>
+                           <Insets right="5.0" />
+                        </padding>
+                     </Label>
+                  </VBox>
+               </VBox>
+            </HBox>
+         </TitledPane>
+         <Button mnemonicParsing="false" onAction="#onClose" prefHeight="30.0" prefWidth="100.0" text="Wyjdź" />
+      </VBox>
+   </ScrollPane>
+</VBox>

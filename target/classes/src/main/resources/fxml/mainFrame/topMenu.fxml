@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.mainControllers.TopMenuController">
+   <children>
+      <Button mnemonicParsing="false" onAction="#openSalesDocs" prefHeight="30.0" prefWidth="100.0" text="Faktury" />
+      <Button mnemonicParsing="false" onAction="#openContractor" prefHeight="30.0" prefWidth="100.0" text="Kontrahenci" />
+      <Button mnemonicParsing="false" onAction="#openWarehouse" prefHeight="30.0" prefWidth="100.0" text="Magazyn" />
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</HBox>
